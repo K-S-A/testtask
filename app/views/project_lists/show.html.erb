@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project_list.description %>
+</p>
+
+<div id="todo_items_wrapper">
+  <%= render @project_list.todo_items %>
+  <div id="form">
+    <%= render "todo_items/form" %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_project_list_path(@project_list) %> |
+<%= link_to 'Back', project_lists_path %>
