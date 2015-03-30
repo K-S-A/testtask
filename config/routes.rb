@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+root "project_lists#index"
+
   resources :project_lists do
     resources :todo_items do
       member do
@@ -8,5 +10,4 @@ Rails.application.routes.draw do
     end
   end
 
-  root "project_lists#index"
 end
